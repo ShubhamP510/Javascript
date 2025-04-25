@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Event Example</title>
+</head>
+<body>
+  <h2>Type something in the input box</h2>
+  
+  <input type="text" 
+         id="keyboardInput" 
+         onkeydown="handleKeyDown(event)" 
+         onkeyup="handleKeyUp(event)" 
+         placeholder="Press any key...">
+  
+  <p id="downText"></p>
+  <p id="upText"></p>
+
+  <script>
+    function handleKeyDown(event) {
+      document.getElementById("downText").innerText = `Key Down: ${event.key}`;
+    }
+
+    function handleKeyUp(event) {
+      document.getElementById("upText").innerText = `Key Up: ${event.key}`;
+    }
+  
+    function handleClick() {
+      alert("Button clicked!");
+    }
+    
+  </script>
+
+</body>
+</html>
