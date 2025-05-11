@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main-div">
+        <h1>Element selection methods</h1>
+        <div class="sub">
+            <h2>Sub heading</h2>
+            <p>This is a paragraph inside the sub-div.</p>
+        </div>
+        <div class="sub">
+            <h2>Another Sub heading</h2>
+            <p>This is another paragraph inside the sub-div.</p>
+        </div>
+    </div>
+
+    <script>
+        // id selector
+        // const heading = document.getElementById("main-div");
+        // heading.style.color = "blue";
+        
+        // classSelector
+        // const subdiv = document.getElementsByClassName("sub");
+        // subdiv[0].style.color = "red";
+        
+        // tagselector
+        // const tag=document.getElementsByTagName("h1");
+        // tag[0].style.backgroundColor="black";
+        // tag[0].style.color="purple";
+
+        // queryselector
+        // const query=document.querySelector(".sub");
+        // query.style.fontSize="30px";
+
+        // queryselectorAll
+        // const items = document.querySelectorAll(".sub");
+        // items.forEach((item) => {
+        // item.style.fontWeight = "bold";
+        // item.style.fontSize="30px";
+        // });
+
+
+        const inne=document.getElementsById("main-div").innerText="<strong>Hello world!</strong>"
+        console.log(inne);
+    </script>
+</body>
+
+</html>

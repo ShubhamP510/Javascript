@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+    <label>
+        <input type="checkbox" id="myCheckbox" /> Accept Terms
+    </label>
+    <button onclick="checkCheckbox()">Submit</button>
+</div>
+<div>
+    <h3>Select your favorite fruits:</h3>
+<label><input type="checkbox" name="fruits" value="Apple"> Apple</label>
+<label><input type="checkbox" name="fruits" value="Banana"> Banana</label>
+<label><input type="checkbox" name="fruits" value="Mango"> Mango</label>
+<label><input type="checkbox" name="fruits" value="Grapes"> Grapes</label>
+<br><br>
+<button onclick="getCheckedFruits()">Submit</button>
+
+</div>
+
+    <script>
+        function getCheckedFruits() {
+  const selectedFruits = [];
+  const checkboxes = document.querySelectorAll('input[name="fruits"]:checked');
+  
+  checkboxes.forEach((checkbox) => {
+    selectedFruits.push(checkbox.value);
+  });
+
+  alert("You selected: " + selectedFruits.join(", "));
+}
+  
+        function checkCheckbox() {
+            const checkbox = document.getElementById("myCheckbox");
+            if (checkbox.checked) {
+                alert("Checkbox is checked!");
+            } else {
+                alert("Checkbox is NOT checked!");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
